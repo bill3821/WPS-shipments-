@@ -253,8 +253,8 @@ const server = http.createServer(async (req, res) => {
   res.writeHead(404); res.end('Not found');
 });
 
-server.listen(PORT, () => {
-  console.log(`\n  🚛 WPS Shipments — http://localhost:${PORT}\n`);
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`\n  🚛 WPS Shipments — http://0.0.0.0:${PORT}\n`);
   console.log('  ✓ Full address geocoding (Nominatim + Open-Meteo fallback)');
   console.log('  ✓ 5-point route weather monitoring (Open-Meteo)');
   console.log('  ✓ NWS/NOAA severe weather alerts');
